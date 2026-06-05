@@ -46,7 +46,7 @@ async def custom_site():
         import tarfile
         async with platform.fopen("galaga_v13.tar.gz", "rb") as archive:
             tar = tarfile.open(fileobj=archive, mode="r:gz")
-            tar.extractall(path=appdir.as_posix(), )
+            tar.extractall(path=appdir.as_posix(), filter='tar')
             tar.close()
 
     # preloader will change to work dir and prepend it to sys.path
@@ -320,10 +320,10 @@ height="720px"
 
         <div id="system" hidden>
             <div class="button-container">
-                <button id="aiostop" disabled>AIO ?�︎</button>
-                <button id="aiopaused_true" disabled>AIO ??/button>
-                <button id="aiopaused_false" disabled>AIO ??/button>
-                <button id="pygame_mixer_music_pause" disabled>Music ??/button>
+                <button id="aiostop" disabled>AIO ⏏︎</button>
+                <button id="aiopaused_true" disabled>AIO ■</button>
+                <button id="aiopaused_false" disabled>AIO ▶</button>
+                <button id="pygame_mixer_music_pause" disabled>Music ■</button>
             </div>
 
             <div class="button-container">
